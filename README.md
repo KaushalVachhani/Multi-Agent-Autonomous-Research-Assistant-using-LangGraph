@@ -30,31 +30,6 @@ This repository contains code for a **Multi-Agent Autonomous Research Assistant*
 - **Interactive User Interface:**  
   - A Gradio-based interface enables users to submit queries and view the formatted research summary in real time.
 
-## How It Works
-
-1. **Query Understanding Agent:**  
-   Processes the input query and extracts essential topics and subtopics.
-
-2. **Parallel Search Agents:**  
-   - **Web Search:** Executes a web search for each subtopic and returns formatted results.
-   - **Arxiv Search:** Searches Arxiv for research papers relevant to each subtopic and returns paper summaries.
-   - The outputs from these agents are merged using a reducer (concatenation) for parallel execution.
-
-3. **Summarization Agent:**  
-   Uses the merged search context and user query to generate a detailed research summary.
-
-4. **Fact Verification Agent:**  
-   Checks the generated summary for factual accuracy, outputting a JSON result with verification status and notes.
-
-5. **Conditional Routing:**  
-   Based on the verification result, the workflow can loop back to the summarization step for further refinement or proceed to formatting if the summary is verified.
-
-6. **Formatting & Export Agent:**  
-   Compiles the final research summary and verification details into a Markdown document.
-
-7. **Gradio Interface:**  
-   Provides an interactive web UI for inputting queries and viewing outputs.
-
 ## Requirements
 
 - **Python 3.x**
